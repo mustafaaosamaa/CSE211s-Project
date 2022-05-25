@@ -1,0 +1,11 @@
+void GPIOF_Handler(void)
+{
+if(GPIO_PORTF_MIS_R&&0x10 == 0x10){
+GPIO_PORTF_ICR_R = 0x10;
+SW12=1;
+}
+if(GPIO_PORTF_MIS_R&&0x10 == 0x10){
+GPIO_PORTF_ICR_R = 0x01;
+SW12=2;
+}
+}
